@@ -6,6 +6,9 @@
     --primary-white: #ffffff;
     --main-color: #E02C6D;
     --main-black: #000000;
+    --star-color: #FB8200;
+    --gray: #787885;
+    --footer-color: #0A0826;
 }
 *{
     margin: 0;
@@ -17,6 +20,9 @@
 .main-width{
     width: 1440px;
     margin: 70px auto;
+}
+main{
+    max-width: 1150px;
 }
 body{
     background: var(--primary-white);
@@ -89,10 +95,142 @@ body{
     margin-left: 40px;
 }
 
+/* Sponsor styles */
+.sponsor{
+    margin-top: 200px;
+}
+.sponsor-img{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 60px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+}
+.sponsor-img img{
+    margin: 10px 20px;
+}
+
+
+/* PoPular Collection */
+.popular-collection{
+    margin-top: 200px;
+}
+.popular-heading{
+    font-size: 3rem;
+    color: var(--main-black);
+    font-weight: bold;
+    text-align: center;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card{
+    width: 330px;
+    height: auto;
+    padding: 25px;
+    box-shadow: 3px 3px 40px 5px #0000000f;
+    border-radius: 8px;
+    margin-top: 40px;
+    background-color: #fff;
+}
+.card img{
+    width: 100%;
+    border-radius: 6px;
+}
+.card h3{
+    margin-top: 20px;
+    font-size: 1.80rem;
+}
+
+.price{
+    color: var(--primary-black);
+    font-size: 1.67rem;
+    font-weight: 600;
+}
+
+.star-box i{
+    color: var(--star-color);
+    font-size: 1.20rem;
+    font-weight: 600px;
+    margin-top: 15px;
+}
+.rating{
+    color: var(--gray);
+    font-size: 1.20rem;
+    font-weight: 600px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.simple-description{
+    color: var(--gray);
+    font-size: 1.45rem;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.see-more-container{
+    text-align: right;
+    margin-right: 150px;
+    margin-top: 25px;
+}
+.see-more{
+    text-align: right;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+
+
+
+/* Featured Section */
+.featured-container{
+    display: flex;
+    gap: 110px;
+}
+.feature-content{
+    margin-top: 40px;
+    width: 750px;
+}
+.feature-content h1{
+    font-size: 2.87rem;
+}
+.feature-btn{
+    padding: 12px 22px;
+    color: var(--primary-white);
+    font-size: 1.37rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    margin-top: 25px;
+    transition: transform .4s ease;
+}
+.feature-btn:hover{
+    transform: scale(1.15);
+}
+.feature-btn p{
+    font-size: 1.47rem;
+    color: var(--primary-black);
+    margin-top: 25px;
+}
+
+/* Footer */
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: var(--footer-color);
+}
+
 /* Responsive */
 @media screen and (max-width: 576px) {
     .header{
-        width: 520px;
+        max-width: 520px;
+    }
+    .main-width{
+        max-width: 520px;
     }
     .navbar{
         flex-direction: column;
@@ -113,5 +251,51 @@ body{
     .banner-titles p{
         margin-top: 25px;
         margin-right: 0px;
+    }
+    
+    .sponsor-img{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border: none;
+        justify-items: center;
+    }
+    .sponsor-img:last-child{
+        display: grid;
+        grid-template-rows: 1, 1fr;
+        justify-items: center;
+    }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 80px;
+    }
+    .card{
+        text-align: center;
+    }
+    /* .popular-collection{
+        width: 500px;
+        margin: 0 0;
+    } */
+    .sponsor{
+        width: 520px;
+        text-align: center;
+        margin: 0;
+    }
+    .popular-heading{
+        font-size: 2.25rem;
+        color: var(--main-black);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    
+    .featured-container{
+        flex-direction: column;
+    }
+    .img img{
+        justify-items: center;
+    }
+    .feature-content{
+        width: 520px;
     }
 }
